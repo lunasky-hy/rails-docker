@@ -2,6 +2,8 @@ db:
   image: mysql
   environment:
     MYSQL_ROOT_PASSWORD: root
+  volumes:
+    - ./mysql-confd:/etc/mysql/conf.d
 
 web:
   build: .
